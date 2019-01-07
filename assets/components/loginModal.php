@@ -1,7 +1,7 @@
-<script src='<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/js/loginFunction.js" : "../js/loginFunction.js"?>'></script>
+<script src='<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/js/loginFunction.js" : "../js/loginFunction.js"?>'></script>
 
 <div id="loginForm" class="modal">
-  <form method="POST" class="modal-content animate" action=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "" : "../../index.php"?>>
+  <form method="POST" class="modal-content animate" action=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "" : "../../index.php"?>>
     <div class="imgcontainer">
       <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
@@ -28,7 +28,7 @@
 </div>
 
 <div id="signUpForm" class="modal">
-  <form method="POST" class="modal-content animate" action=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "" : "../../index.php"?>>
+  <form method="POST" class="modal-content animate" action=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "" : "../../index.php"?>>
     <div class="imgcontainer">
       <span onclick="document.getElementById('signUpForm').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>

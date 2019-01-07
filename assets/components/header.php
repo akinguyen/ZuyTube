@@ -1,18 +1,18 @@
 <?php
-require strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/includes/config.php" : "../includes/config.php";
-require strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/classes/User.php" : "../classes/User.php";
-require strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/classes/subList.php" : "../classes/subList.php";
+require strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/includes/config.php" : "../includes/config.php";
+require strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/classes/User.php" : "../classes/User.php";
+require strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/classes/subList.php" : "../classes/subList.php";
 ?>
 <?php
 session_start();
 if (isset($_POST["email"]) || isset($_POST["editSuccess"])) {
     $_SESSION["email"] = $_POST["email"];
-    $location = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "index.php" : "../../index.php";
+    $location = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "index.php" : "../../index.php";
     header("Location: $location");
 }
 if (isset($_GET["userLoggedOut"])) {
     unset($_SESSION["email"]);
-    $location = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "index.php" : "../../index.php";
+    $location = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "index.php" : "../../index.php";
     header("Location: $location");
 }
 
@@ -36,11 +36,11 @@ if (isset($_GET["userLoggedOut"])) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <!-- videotube.css -->
-    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/css/videotube.css" : "../css/videotube.css"?> />
-    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/css/sideMenu.css" : "../css/sideMenu.css"?> />
-    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/css/login.css" : "../css/login.css"?> />
-    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/css/videoHome.css" : "../css/videoHome.css"?> />
-    <script src=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/js/searchBar.js" : "../js/searchBar.js"?>></script>
+    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/css/videotube.css" : "../css/videotube.css"?> />
+    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/css/sideMenu.css" : "../css/sideMenu.css"?> />
+    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/css/login.css" : "../css/login.css"?> />
+    <link rel="stylesheet"  href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/css/videoHome.css" : "../css/videoHome.css"?> />
+    <script src=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/js/searchBar.js" : "../js/searchBar.js"?>></script>
 </head>
 
 <body>
@@ -58,7 +58,7 @@ if (isset($_SESSION["email"])) {
         </div>
         </li>
         <li class="nav-item">
-            <a class=" navbar-brand nav-link text-information" href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "" : "../../index.php"?>>
+            <a class=" navbar-brand nav-link text-information" href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "" : "../../index.php"?>>
                 ZuyTube
             </a>
         </li>
@@ -73,7 +73,7 @@ if (isset($_SESSION["email"])) {
             })
         })
     </script>
-  <form method="get" action=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/pages/result.php" : "../pages/result.php"?> class="searchForm form-inline">
+  <form method="get" action=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/pages/result.php" : "../pages/result.php"?> class="searchForm form-inline">
     <div class="nav-link">
         <img class="back-button rounded-circle" src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/27-512.png" alt="Back">
     </div>
@@ -82,7 +82,7 @@ if (isset($_SESSION["email"])) {
   </form>
     <ul class="navbar-nav left mr-2">
       <li class="nav-item">
-        <a class="nav-link" href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/pages/upload.php" : "upload.php"?>>
+        <a class="nav-link" href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/pages/upload.php" : "upload.php"?>>
             <img class="icon rounded-circle" src="https://www.colprinting.com/wp-content/uploads/2015/02/upload.png" alt="Upload">
         </a>
       </li>
@@ -93,7 +93,7 @@ if (isset($_SESSION["email"])) {
       </li>
       <?php
 if (isset($_SESSION["email"])) {
-    $profileUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/pages/profile.php" : "profile.php";
+    $profileUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/pages/profile.php" : "profile.php";
     echo
         "
           <li class='nav-item'>
@@ -126,17 +126,17 @@ if (isset($_SESSION["email"])) {
 </style>
 <div id="mainSection">
     <div id="mySidebar" class="sidebar">
-        <a href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "" : "../../index.php"?>>Home</a>
-        <a href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/pages/trending.php" : "trending.php"?>>Trending</a>
+        <a href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "" : "../../index.php"?>>Home</a>
+        <a href=<?=strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/pages/trending.php" : "trending.php"?>>Trending</a>
         <?php
 if (isset($_SESSION["email"])) {
-    $likedUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/pages/likedVideo.php" : "likedVideo.php";
+    $likedUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/pages/likedVideo.php" : "likedVideo.php";
 
-    $settingUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/pages/setting.php" : "setting.php";
+    $settingUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/pages/setting.php" : "setting.php";
 
-    $aboutUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "assets/pages/profile.php" : "profile.php";
+    $aboutUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "assets/pages/profile.php" : "profile.php";
 
-    $logOutUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 ? "?userLoggedOut=1" : "../../index.php?userLoggedOut=1";
+    $logOutUrl = strpos($_SERVER['REQUEST_URI'], 'index.php') > 0 || strlen($_SERVER["REQUEST_URI"]) === 11 || ($_SERVER["REQUEST_URI"]) === "/" ? "?userLoggedOut=1" : "../../index.php?userLoggedOut=1";
 
     echo "<a href='$likedUrl'>Liked Videos</a>";
     echo "<a href='$aboutUrl'>About</a>";

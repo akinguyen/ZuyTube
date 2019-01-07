@@ -25,19 +25,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Table structure for table `Categories`
 --
 
-CREATE TABLE `categories` (
+CREATE TABLE `Categories` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `categories`
+-- Dumping data for table `Categories`
 --
 
-INSERT INTO `categories` (`id`, `name`) VALUES
+INSERT INTO `Categories` (`id`, `name`) VALUES
 (2, 'Auto & Vehicles'),
 (9, 'Comedy'),
 (13, 'Education'),
@@ -419,9 +419,9 @@ INSERT INTO `videos` (`id`, `uploadedBy`, `title`, `description`, `privacy`, `vi
 --
 
 --
--- Indexes for table `categories`
+-- Indexes for table `Categories`
 --
-ALTER TABLE `categories`
+ALTER TABLE `Categories`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
@@ -484,9 +484,9 @@ ALTER TABLE `videos`
 --
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT for table `Categories`
 --
-ALTER TABLE `categories`
+ALTER TABLE `Categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `commentdislikes`

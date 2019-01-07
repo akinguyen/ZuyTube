@@ -98,7 +98,7 @@ class CommentForm
         <div class='row'>
               <div class='col-4 col-md-3 col-lg-2 col-md-2'>
                 <div class='mt-4 ml-4 mb-4 '>
-                  <a href='/profile/id/5c14a69be9c94600161fa845'
+                  <a href='profile.php?username=$username'
                     ><img
                       src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShci2i08psVXKRwGLnhzTe5T9KeyO1cv_zq0nNf0DZ7c5ME00hOQ'
                       alt='User'

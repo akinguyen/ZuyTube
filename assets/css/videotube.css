@@ -1,0 +1,93 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  width: 30px;
+}
+.menu-icon {
+  width: 20px;
+}
+.menu-icon:hover {
+  cursor: pointer;
+}
+.mainSection {
+  margin-top: 39px;
+}
+#loading {
+  position: fixed;
+  display: none;
+  width: 75%;
+  z-index: 0;
+}
+.nav-item {
+  margin-left: 16px;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+.searchButton {
+  margin: 0 auto;
+}
+.searchBar {
+  display: none;
+}
+.back-button {
+  width: 20px;
+  display: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .searchBar {
+    display: none;
+  }
+  .searchButton {
+    margin: 0 auto;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+  .back-button {
+    width: 20px;
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .searchBar {
+    display: block;
+    width: 330px;
+  }
+  .searchButton {
+    margin-left: 0;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .searchBar {
+    display: block;
+    width: 560px;
+  }
+  .searchButton {
+    margin-left: 0;
+  }
+  .nav-item {
+    margin-left: 5px;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

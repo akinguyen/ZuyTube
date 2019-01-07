@@ -1,0 +1,77 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  width: 30px;
+}
+.menu-icon {
+  width: 20px;
+}
+.back-button {
+  width: 20px;
+}
+.searchBar {
+  display: none;
+}
+.nav-item {
+  margin-left: 16px;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+.menu {
+  height: 100%;
+}
+.row.content {
+  height: 450px;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .searchBar {
+    display: block;
+    width: 230px;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .searchBar {
+    display: block;
+    width: 400px;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .searchBar {
+    display: block;
+    width: 600px;
+  }
+  .nav-item {
+    margin-left: 5px;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

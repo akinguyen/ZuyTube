@@ -1,0 +1,54 @@
+.videoSide {
+  width: 100%;
+  float: left;
+}
+
+.thumbnail {
+  height: 100px;
+}
+.thumbnailBox {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.thumbnailDetail {
+  font-size: 10px;
+  padding-left: 20px;
+}
+.time {
+  color: white;
+  background-color: black;
+  width: 40px;
+  font-size: 10px;
+  position: relative;
+  text-decoration: none;
+  bottom: 13px;
+  text-align: center;
+}
+@media (max-width: 261px) {
+}
+
+@media (max-width: 366px) {
+}
+
+/*width="738" height="416"*/
+@media (min-width: 576px) {
+  .thumbnail {
+    height: 140px;
+  }
+  .thumbnailDetail {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

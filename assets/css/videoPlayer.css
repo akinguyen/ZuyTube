@@ -1,0 +1,83 @@
+.videoDetail {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  /* float: left; */
+}
+.videoSide {
+  width: 100%;
+  float: left;
+  margin-bottom: 40px;
+}
+.suggested {
+  display: block;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+}
+.thumbnail {
+  height: 100px;
+}
+.thumbnailBox {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.thumbnailDetail {
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+/*width="738" height="416"*/
+@media (min-width: 576px) {
+  iframe {
+    width: 100%;
+    height: 330px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  iframe {
+    height: 300px;
+  }
+  .videoSide {
+    width: 30%;
+    float: left;
+    padding-left: 50px;
+  }
+  .suggested {
+    display: none;
+  }
+  .videoDetail {
+    width: 70%;
+  }
+  .thumbnailBox {
+    width: 130%;
+    margin-bottom: 5px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .videoSide {
+    width: 30%;
+    float: left;
+  }
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+}

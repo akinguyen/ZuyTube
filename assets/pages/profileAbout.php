@@ -1,0 +1,2 @@
+<?php
+$profileUser->createProfile();

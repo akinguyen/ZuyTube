@@ -1,0 +1,95 @@
+.videoDetail {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  /* float: left; */
+}
+.videoSide {
+  width: 100%;
+  float: left;
+  margin-bottom: 40px;
+}
+iframe {
+  width: 100%;
+  height: 160px;
+}
+.thumbnail {
+  height: 100px;
+}
+.thumbnailBox {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.thumbnailDetail {
+  font-size: 10px;
+  padding-left: 10px;
+}
+@media (min-width: 281px) {
+  iframe {
+    width: 100%;
+    height: 210px;
+  }
+}
+@media (min-width: 311px) {
+  .videoPlayer {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 230px;
+  }
+}
+@media (min-width: 345px) {
+  .videoPlayer {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 270px;
+  }
+}
+@media (min-width: 465px) {
+  .videoPlayer {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 310px;
+  }
+}
+/*width="738" height="416"*/
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .videoSide {
+    width: 30%;
+    float: left;
+    padding-left: 50px;
+  }
+  .videoDetail {
+    width: 70%;
+  }
+  .thumbnailBox {
+    width: 130%;
+    margin-bottom: 5px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .videoSide {
+    width: 30%;
+    height: 100%;
+    float: left;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

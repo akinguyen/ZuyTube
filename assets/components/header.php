@@ -45,7 +45,7 @@ if (isset($_GET["userLoggedOut"])) {
 
 <body>
 <?
-
+echo $_SERVER["REQUEST_URI"];
 if (isset($_SESSION["email"])) {
     $user = new User($pdo, $_SESSION["email"]);
 }
